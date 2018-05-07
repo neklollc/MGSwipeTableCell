@@ -831,9 +831,9 @@ static inline CGFloat mgEaseInOutBounce(CGFloat t, CGFloat b, CGFloat c) {
     CGFloat currentOffset = _swipeOffset;
     BOOL prevValue = _triggerStateChanges;
     _triggerStateChanges = NO;
-    __block MGSwipeTableCell *blockSelf = self;
+    __weak MGSwipeTableCell *weakSelf = self;
     [self setSwipeOffset:0 animated:NO completion:^{
-        [blockSelf setSwipeOffset:currentOffset animated:NO completion:^{
+        [weakSelf setSwipeOffset:currentOffset animated:NO completion:^{
             _triggerStateChanges = prevValue;
         }];
     }];
