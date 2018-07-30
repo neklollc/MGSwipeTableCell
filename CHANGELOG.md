@@ -1,5 +1,44 @@
 # Changelog
 
+## 1.6.7
+
+- Fix quality loss in snapshot image.
+- Got rid from Block implicitly warning.
+
+## 1.6.6
+
+- Improve notch code to better handle edge cases like orientation changes while swiping.
+- Correctly handle safeAreaInsets for RTL language.
+- Add allowsButtonWithDifferentWidth property to MGSwipeSettings and deprecate the one in MGSwipeTableCell.
+
+## 1.6.5
+
+- Expand the first or last button width to make appearance look good with a notch (e.g. iPhone X).
+- Add expandLastButtonBySafeAreaInsets property to optionally enable/disable the default behaviour.
+
+## 1.6.4
+
+- Backwards compatibility with XCode 8 compilation
+
+## 1.6.2
+
+- Handle iOS 11 safeAreaInsets.
+- Fix issue #302: Right Buttons are covered iPhone X when landscape.
+- Use availability checks for Objective-C to remove some warings in XCode 9.
+
+## 1.6.1
+
+- Fix issue #294: iOS 11 crash.
+
+## 1.6.0
+
+- Fix glitch when dragging before animation completes.
+- Fix cell separator overlap when swiping.
+- Add buttonsDistance property to MGSwipeSettings: allows to control distance between the buttons.
+- Add MGSwipeExpansionLayoutNone type that allows not to performont button layout in expansions.
+- Improved AppExtension and RTL language support.
+- Improved Swift interoperation.
+
 ## 1.5.6
 
 - Improve iOS 10.0 support
